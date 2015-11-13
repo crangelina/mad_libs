@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    <title>Mad Libs</title>
+
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Coming+Soon|Walter+Turncoat|Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+
+  <body>
+
+  	<div class="container-fluid">
+ 		<div class="row">
+		  <div class="col-md-3"></div>
+
+
+		  <div class="main col-md-6">
+		  	<h1>Mad Libs</h1>
+		  	<form>
+
+          <!-- ADJECTIVE1 -->
+		  		<div class="word form-group col-sm-6">
+            <label for="adjective1">Adjective</label>
+            <input name="adjective1" type="text" class="form-control" id="adjective1">
+          </div>
+
+          <!-- VERB1 -->
+          <div class="word form-group col-sm-6">
+            <label for="verb1">Verb <span>(ending in -ed)</span></label>
+            <input name="verb1" type="text" class="form-control" id="verb1">
+          </div>
+
+          <!-- NOUN1 -->
+  			  <div class="word form-group col-sm-6">
+  			    <label for="noun1">Noun <span>(plural)</span></label>
+  			    <input name="noun1" type="text" class="form-control" id="noun1">
+  			  </div>
+
+          <!-- NOUN2 -->
+          <div class="word form-group col-sm-6">
+            <label for="noun2">Noun</label>
+            <input name="noun2" type="text" class="form-control" id="noun2">
+          </div>
+
+          <!-- ADJECTIVE2 -->
+          <div class="word form-group col-sm-6">
+            <label for="adjective2">Adjective</label>
+            <input name="adjective2" type="text" class="form-control" id="adjective2">
+          </div>
+
+          <!-- NOUN3 -->
+          <div class="word form-group col-sm-6">
+            <label for="noun3">Animal</label>
+            <input name="noun3" type="text" class="form-control" id="noun3">
+          </div>
+
+          <!-- VERB2 -->
+          <div class="word form-group col-sm-6">
+            <label for="verb2">Verb</label>
+            <input name="verb2" type="text" class="form-control" id="verb2">
+          </div>
+
+          <!-- NOUN4 -->
+          <div class="word form-group col-sm-6">
+            <label for="noun4">Noun</label>
+            <input name="noun4" type="text" class="form-control" id="noun4">
+          </div>
+
+          <!-- SUBMIT BUTTON-->
+          <div class="button">
+    			  <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+
+			  </form>
+        <div id='final-text'>
+          <div class="button final-text-button">
+            <button class="btn btn-default" type="submit">Again!</button>
+          </div>
+        </div>
+		  </div>
+
+
+
+
+		  <div class="col-md-3"></div>
+		</div>
+	</div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>

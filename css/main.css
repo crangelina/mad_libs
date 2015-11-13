@@ -1,0 +1,59 @@
+body {
+	background-color: #d0e7e3;
+}
+
+.main {
+	background-color: #16a085;
+}
+
+h1 {
+	text-align: center;
+	color: #ecf0f1;
+	font-family: 'Coming Soon', cursive;
+	font-size: 48px;
+	margin-top: 0;
+	padding: 40px 0;
+}
+
+label {
+	color: #ecf0f1;
+	font-family: 'Coming Soon', cursive;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+
+span {
+	font-size: 16px;
+}
+
+.btn {
+	margin-bottom: 20px;
+	font-size: 22px;
+	font-family: 'Walter Turncoat', cursive;	
+	width: 150px;
+	border: 1px solid #12967c;
+	border-bottom: 2px solid #0e836c;
+	color: #363434;
+}
+
+.button {
+	text-align: center;
+}
+
+#final-text {
+	background-color: #16a085;
+	padding-left: 60px;
+	padding-right: 60px;
+	min-height: 400px;
+	color: #ecf0f1;
+	font-family: 'Coming Soon', cursive;
+	font-size: 22px;
+	letter-spacing: 1px;
+	display: none;
+}
+
+.final-text-button {
+	margin-top: 50px;
+}
+
+
