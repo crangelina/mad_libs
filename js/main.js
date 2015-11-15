@@ -2,37 +2,33 @@ var MadLib = {
 	$finalText: $('#final-text'),
 	$form     : $('form'),
 	words     : {},
+	random    : _.random(1, 4),
+
+	getStoryTemplate: function() {
+		return _.template(this.templateString);
+	},
 
 	init: function() {
-		this.$form.on('submit', this.createStory);
+		this.templateString = $("#story" + MadLib.random).text();
+		this.$form.on('submit', _.bind(this.createStory, this));
 		$('.final-text-button').on('click', this.restart);
 	},
 
 	createStory: function(event) {
-		event.preventDefault();
 		var values = MadLib.$form.serializeArray();
+		var storyTemplate = this.getStoryTemplate();
+		event.preventDefault();
 		$.each(values, function(i, item) {
 			MadLib.words[item.name] = item.value;
 		});
-		$(this)[0].reset();
-		MadLib.displayStory();
+		MadLib.$form[0].reset();
+		MadLib.displayStory(storyTemplate);
 	},
 
-	storyText: function() {
-		return "I enjoy long, " + MadLib.words.adjective1 
-		+ " walks on the beach, getting " + MadLib.words.verb1
-		+ " in the rain, and romantic, candle-lit " + MadLib.words.noun1
-		+ ". I am looking for a " + MadLib.words.noun2
-		+ " with a " + MadLib.words.adjective2
-		+ " personality. They should have the physique of a " + MadLib.words.noun3
-		+ " and I would prefer if they knew how to " + MadLib.words.verb2
-		+ ", clean, and wash my " + MadLib.words.noun4 + "."
-	},
-
-	displayStory: function() {
+	displayStory: function(storyTemplate) {
 		MadLib.$form.hide();
 		MadLib.$finalText.show();
-		MadLib.$finalText.prepend(MadLib.storyText);
+		MadLib.$finalText.prepend(storyTemplate(MadLib.words));
 	},
 
 	restart: function() {

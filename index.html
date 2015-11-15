@@ -21,8 +21,15 @@
 
 
 		  <div class="main col-md-6">
+
 		  	<h1>Mad Libs</h1>
 		  	<form>
+
+           <!-- PERSON -->
+          <div class="word form-group col-md-6 col-sm-12 col-xs-12">
+            <label for="person">Person in the room</label>
+            <input name="person" type="text" class="form-control" id="person">
+          </div>
 
           <!-- ADJECTIVE1 -->
 		  		<div class="word form-group col-md-6 col-sm-12 col-xs-12">
@@ -72,18 +79,52 @@
             <input name="noun4" type="text" class="form-control" id="noun4">
           </div>
 
+          <!-- ADJECTIVE3 -->
+          <div class="word form-group col-md-6 col-sm-12 col-xs-12">
+            <label for="adjective3">Adjective</label>
+            <input name="adjective3" type="text" class="form-control" id="adjective3">
+          </div>
+
           <!-- SUBMIT BUTTON-->
           <div class="button">
     			  <button type="submit" class="btn btn-default">Submit</button>
           </div>
 
 			  </form>
-        <div id='final-text'>
+
+        <div id="final-text">
+          <script id='story1' type="text/template">
+            <div>
+              Hello, my name is <%= person %>! I enjoy long, <%= adjective1 %> walks on the beach, getting <%= verb1 %> in the rain, and romantic, candle-lit <%= noun1 %>. I am looking for a <%= noun2 %> with a <%= adjective2 %> personality. They should have the physique of a <%= noun3 %> and <%= adjective3 %> hair. I would prefer if they knew how to <%= verb2 %>, clean, and wash my <%= noun4 %>. 
+            </div>
+          </script>
+          <script id='story2' type="text/template">
+            <div>
+              Breaking news!</br></br> A <%= adjective2 %> <%= noun4 %> by the name of <%= person %> was arrested this morning after they <%= verb1 %> in front of a <%= noun2 %>. The subject was reported to have been seen walking his <%= adjective3 %> pet <%= noun3 %> right before the incident occurred. The police managed to <%= verb2 %> the fugitive before he could flee the scene. We imagine that after witnessing such a <%= adjective1 %> crime that many <%= noun1 %> in this city are going to need some therapy.
+            </div>
+          </script>
+          <script id='story3' type="text/template">
+            <div>
+              My <%= adjective2 %> wife, </br></br>
+              My love for you is deeper than my love for <%= noun1 %>. Without you my life would be <%= adjective1 %>. I can&apos;t stop thinking about the color of your <%= noun2 %> and the way your <%= noun4 %> shines in the sun. When I think of you I can&apos;t help but <%= verb2 %>. Do you still remember that <%= adjective3 %> day when we <%= verb1 %> all over the zoo. I remember how much you loved seeing the <%= noun3 %> exhibit. Please write me back soon, my love. </br></br>
+                Yours truly, </br>
+                <%= person %>
+            </div>
+          </script>
+          <script id='story4' type="text/template">
+            <div>
+            The last time I went to a sleepover, a <%= adjective2 %> pillow fight broke out. Out of nowhere, <%= person %> grabbed his/her <%= adjective1 %> <%= noun4 %> and began swinging it at anyone near by. At one point, they got me right in the back of my head! One of my friends accidently swung their big <%= noun2 %> at the family <%= noun3 %>. But don&apos;t worry, no one got hurt. After our <%= adjective3 %> pillow fight we all went outside and <%= verb1 %> together. Afterwards we were going to <%= verb2 %> but it got dark before we could. Instead, we ended the night with a funny movie about <%= noun1 %>. I can&apos;t wait for our next sleepover!
+                        
+            </div>
+          </script>
+
           <div class="button final-text-button">
             <button class="btn btn-default" type="submit">Again!</button>
           </div>
         </div>
-		  </div>
+        
+
+		  </div> <!--end main-->
 
 
 
@@ -94,6 +135,7 @@
 
 
     <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="js/main.js"></script>
     
   </body>
